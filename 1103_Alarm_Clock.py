@@ -24,9 +24,13 @@ while(True):
 
     startTime = splitedTime[0]*60 + splitedTime[1]
     endTime = splitedTime[2]*60 + splitedTime[3]
-    totalTime = endTime - startTime
 
-    sleepTime.append(abs(totalTime))
+    if endTime <= startTime:
+        endTime += 24*60
 
-    for i in sleepTime:
+
+    sleepTime.append(abs(endTime - startTime))
+
+
+for i in sleepTime:
     print(i)
