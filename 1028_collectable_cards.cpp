@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 using namespace std;
 
 int gcd(int divisor, int dividend){
@@ -38,10 +37,11 @@ int main(){
 		divisor = a;
 		dividend = b;
 		}
-		cout << gcd(divisor, dividend);
+
+		cout << gcd(divisor, dividend) << endl;
     }
 
     
 	return 0;
-    }
+}
 
