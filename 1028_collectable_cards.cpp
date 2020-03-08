@@ -18,29 +18,30 @@ int gcd(int divisor, int dividend){
 	return divisor;
 }
 
-int main{
+int main(){
 
 	int numb_test, b, a;
-    	int mdc, smaller_value;
+	int divisor, dividend;
 
-    	cin >> numb_test;
+    cin >> numb_test;
 
-    	for(int i = 0; i < numb_test; i++){
+    for(int i = 0; i < numb_test; i++){
 
-        	cin >> a >> b;
+        cin >> a >> b;
 
-        	if(a > b){
+        if(a > b){
 
-			divisor = b;
-			dividend = a;
+		divisor = b;
+		dividend = a;
 		}else{
 	
-			divisor = a;
-			dividend = b;
+		divisor = a;
+		dividend = b;
 		}
-        }
-
-        cout << gdc(divisor, dividend);
+		cout << gcd(divisor, dividend);
     }
+
+    
 	return 0;
-}
+    }
+
