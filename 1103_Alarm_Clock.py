@@ -2,33 +2,18 @@ sleepTime = []
 
 while(True):
 
-    time = input()
+    H1, M1, H2, M2 = map(int, input().split(" "))
 
-    splitedTime = time.split(" ")
+    if H1 == M1 == H2 == M2 == 0: break
 
-    numbZeros = 0
-    for i in range(len(splitedTime)):
+    if H1 == 0: H1 = 24
+    if H2 == 0: H2 = 24
 
-        splitedTime[i] = int(splitedTime[i])
+    endTime = H2*60 + M2
+    startTime = H1*60 + M1
 
-        if splitedTime[i] == 0:
-            numbZeros += 1
-
-        if i % 2 == 0:
-
-            if splitedTime[i] == 0:
-                splitedTime[i] = 24 
-        
-    if numbZeros >= 4:
-        break
-
-    startTime = splitedTime[0]*60 + splitedTime[1]
-    endTime = splitedTime[2]*60 + splitedTime[3]
-
-    if endTime <= startTime:
-        endTime += 24*60
-
-
+    if endTime <= startTime: endTime += 24*60
+    
     sleepTime.append(abs(endTime - startTime))
 
 
